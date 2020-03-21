@@ -1,7 +1,6 @@
 package com.example.orderserver.controller;
 
 
-
 import com.example.orderserver.converter.OrderForm2OrderDTOConverter;
 import com.example.orderserver.dto.OrderDTO;
 import com.example.orderserver.enums.ResultEnum;
@@ -11,7 +10,9 @@ import com.example.orderserver.vo.ResultVO;
 import com.example.productclient.ProductClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -56,6 +57,14 @@ public class OrderController {
         }
 
         return null;
+    }
+
+    @Value("${env}")
+    String env;
+
+    @GetMapping("/env")
+    public String getEnv() {
+        return env;
     }
 
 }
