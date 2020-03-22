@@ -58,13 +58,4 @@ public class OrderController {
 
         return null;
     }
-
-    @Value("${env}")
-    String env;
-
-    @GetMapping("/env")
-    public String getEnv() {
-        return env;
-    }
-
 }
