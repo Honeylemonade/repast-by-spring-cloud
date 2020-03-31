@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4673161c-3ee8-46a6-b67a-902d601a0599" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/order/order-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/order-server/src/main/java/com/example/orderserver/message/ProductInfoReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/order-server/src/main/java/com/example/orderserver/utils/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/product-server/src/main/java/com/example/productserver/utils/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul/src/main/java/com/example/zuul/ZuulApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul/src/test/java/com/example/zuul/ZuulApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/order-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/order-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-server/src/main/java/com/example/orderserver/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-server/src/main/java/com/example/orderserver/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-server/src/main/resources/bootstrap.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/product-server/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product/product-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/product-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product/product-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/product-server/src/main/java/com/example/productserver/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/product-server/src/main/java/com/example/productserver/service/impl/ProductServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +67,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth0" value="718" />
+    <property name="RequestMappingsPanelWidth1" value="718" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -76,26 +80,56 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\product\server" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.orderserver.dto" />
-      <recent name="com.example.ordercommon" />
-      <recent name="com.example.productclient" />
-      <recent name="com.example.productserver.vo" />
-      <recent name="com.example.productserver.utils" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\order\order-server\src\main\java\com\example\orderserver" />
       <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\product\product-server\src\main\java\com\example\productserver" />
       <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\product\product-server\src\main\java\com\example\productserver\entity" />
       <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\product\server" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.orderserver.utils" />
+      <recent name="com.example.orderserver.dto" />
+      <recent name="com.example.ordercommon" />
+      <recent name="com.example.productclient" />
+      <recent name="com.example.productserver.vo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\product\server" />
+    </key>
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8500/actuator/routes" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/vnd.spring-boot.actuator.v3+json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8500/actuator/info" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/vnd.spring-boot.actuator.v3+json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8084/order/env" />
@@ -168,10 +202,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.OrderServerApplication#3">
-    <configuration name="ConfigApplication#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/ConfigApplication.http" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="HTTP Request.ZuulApplication#2">
     <configuration name="OrderServerApplication#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/OrderServerApplication.http" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -179,6 +210,12 @@
       <method v="2" />
     </configuration>
     <configuration name="OrderServerApplication#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/OrderServerApplication.http" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="ZuulApplication#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/ZuulApplication.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="ZuulApplication#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/ZuulApplication.http" index="2" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="ConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -209,22 +246,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ZuulApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zuul" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.zuul.ZuulApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="HTTP Request.OrderServerApplication#1" />
+      <item itemvalue="HTTP Request.OrderServerApplication#2" />
+      <item itemvalue="HTTP Request.OrderServerApplication#3" />
       <item itemvalue="Spring Boot.EurekaApplication" />
       <item itemvalue="Spring Boot.ProductServerApplication" />
       <item itemvalue="Spring Boot.OrderServerApplication" />
       <item itemvalue="Spring Boot.ConfigApplication" />
-      <item itemvalue="HTTP Request.ConfigApplication#1" />
-      <item itemvalue="HTTP Request.OrderServerApplication#1" />
-      <item itemvalue="HTTP Request.OrderServerApplication#2" />
-      <item itemvalue="HTTP Request.OrderServerApplication#3" />
+      <item itemvalue="Spring Boot.ZuulApplication" />
+      <item itemvalue="HTTP Request.ZuulApplication#1" />
+      <item itemvalue="HTTP Request.ZuulApplication#2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.ZuulApplication#2" />
+        <item itemvalue="HTTP Request.ZuulApplication#1" />
         <item itemvalue="HTTP Request.OrderServerApplication#3" />
         <item itemvalue="HTTP Request.OrderServerApplication#2" />
         <item itemvalue="HTTP Request.OrderServerApplication#1" />
-        <item itemvalue="HTTP Request.ConfigApplication#1" />
       </list>
     </recent_temporary>
   </component>
@@ -232,6 +279,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
+          <option name="contentProportion" value="0.25303644" />
           <treeState>
             <expand>
               <path>
@@ -241,7 +289,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -270,6 +323,7 @@
       <workItem from="1584763351212" duration="1241000" />
       <workItem from="1584775366639" duration="9410000" />
       <workItem from="1584832533559" duration="6166000" />
+      <workItem from="1585633695270" duration="10894000" />
     </task>
     <servers />
   </component>
@@ -288,54 +342,54 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="479" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584666681834" />
-    <state x="755" y="304" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584686635427">
+    <state x="755" y="304" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585636649944">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="755" y="304" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584686635427" />
+    <state x="755" y="304" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585636649944" />
     <state x="781" y="310" key="FileChooserDialogImpl" timestamp="1584683078307">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="781" y="310" key="FileChooserDialogImpl/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584683078307" />
-    <state width="1024" height="172" key="GridCell.Tab.0.bottom" timestamp="1584838832978">
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1585649120454">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.0.bottom/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099150" />
-    <state width="1024" height="172" key="GridCell.Tab.0.bottom/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584838832978" />
-    <state width="1024" height="172" key="GridCell.Tab.0.center" timestamp="1584838832978">
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120454" />
+    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1585649120453">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.0.center/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099150" />
-    <state width="1024" height="172" key="GridCell.Tab.0.center/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584838832978" />
-    <state width="1024" height="172" key="GridCell.Tab.0.left" timestamp="1584838832978">
+    <state width="2005" height="305" key="GridCell.Tab.0.center/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120453" />
+    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1585649120453">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.0.left/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099150" />
-    <state width="1024" height="172" key="GridCell.Tab.0.left/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584838832978" />
-    <state width="1024" height="172" key="GridCell.Tab.0.right" timestamp="1584838832978">
+    <state width="2005" height="305" key="GridCell.Tab.0.left/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120453" />
+    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1585649120453">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.0.right/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099150" />
-    <state width="1024" height="172" key="GridCell.Tab.0.right/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584838832978" />
-    <state width="1024" height="172" key="GridCell.Tab.1.bottom" timestamp="1584838832979">
+    <state width="2005" height="305" key="GridCell.Tab.0.right/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120453" />
+    <state width="1475" height="427" key="GridCell.Tab.1.bottom" timestamp="1585649120451">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.1.bottom/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099151" />
-    <state width="1024" height="172" key="GridCell.Tab.1.bottom/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584838832979" />
-    <state width="1024" height="172" key="GridCell.Tab.1.center" timestamp="1584838832979">
+    <state width="1475" height="427" key="GridCell.Tab.1.bottom/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120451" />
+    <state width="1475" height="427" key="GridCell.Tab.1.center" timestamp="1585649120451">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.1.center/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099151" />
-    <state width="1024" height="172" key="GridCell.Tab.1.center/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584838832979" />
-    <state width="1024" height="172" key="GridCell.Tab.1.left" timestamp="1584838832978">
+    <state width="1475" height="427" key="GridCell.Tab.1.center/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120451" />
+    <state width="1475" height="427" key="GridCell.Tab.1.left" timestamp="1585649120451">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.1.left/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099150" />
-    <state width="1024" height="172" key="GridCell.Tab.1.left/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584838832978" />
-    <state width="1024" height="172" key="GridCell.Tab.1.right" timestamp="1584838832979">
+    <state width="1475" height="427" key="GridCell.Tab.1.left/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120451" />
+    <state width="1475" height="427" key="GridCell.Tab.1.right" timestamp="1585649120451">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.1.right/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099151" />
-    <state width="1024" height="172" key="GridCell.Tab.1.right/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584838832979" />
+    <state width="1475" height="427" key="GridCell.Tab.1.right/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120451" />
     <state x="695" y="272" key="NewModule_or_Project.wizard" timestamp="1584666232810">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -344,9 +398,9 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="505" y="164" width="1038" height="816" key="SettingsEditor/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584752597678" />
-    <state x="386" y="310" key="new project wizard" timestamp="1584775616732">
+    <state x="386" y="310" key="new project wizard" timestamp="1585639923429">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="386" y="310" key="new project wizard/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584775616732" />
+    <state x="386" y="310" key="new project wizard/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585639923429" />
   </component>
 </project>

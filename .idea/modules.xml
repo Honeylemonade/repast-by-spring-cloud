@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/product/product-client/product-client.iml" filepath="$PROJECT_DIR$/product/product-client/product-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/product/product-common/product-common.iml" filepath="$PROJECT_DIR$/product/product-common/product-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/product/product-server/product-server.iml" filepath="$PROJECT_DIR$/product/product-server/product-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul/zuul.iml" filepath="$PROJECT_DIR$/zuul/zuul.iml" />
     </modules>
   </component>
 </project>
