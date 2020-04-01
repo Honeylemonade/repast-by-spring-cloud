@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4673161c-3ee8-46a6-b67a-902d601a0599" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/order/order-server/src/main/java/com/example/orderserver/message/ProductInfoReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/order-server/src/main/java/com/example/orderserver/utils/JsonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/product-server/src/main/java/com/example/productserver/utils/JsonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul/src/main/java/com/example/zuul/ZuulApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul/src/test/java/com/example/zuul/ZuulApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/product-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product/product-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/product-server/src/main/java/com/example/productserver/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/product-server/src/main/java/com/example/productserver/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul/src/main/java/com/example/zuul/filter/RateLimitFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul/src/main/java/com/example/zuul/filter/ResponseHeaderFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul/src/main/java/com/example/zuul/filter/TokenFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,23 +59,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="718" />
-    <property name="RequestMappingsPanelWidth1" value="718" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/order/order-server/src/main/java/com/example/orderserver" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/zuul/src/main/java/com/example/zuul/filter" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\order\order-server\src\main\java\com\example\orderserver" />
-      <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\product\product-server\src\main\java\com\example\productserver" />
-      <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\product\product-server\src\main\java\com\example\productserver\entity" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\product\server" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -93,7 +82,11 @@
       <recent name="com.example.productclient" />
       <recent name="com.example.productserver.vo" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\zuul\src\main\java\com\example\zuul\filter" />
+      <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\order\order-server\src\main\java\com\example\orderserver" />
+      <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\product\product-server\src\main\java\com\example\productserver" />
+      <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\product\product-server\src\main\java\com\example\productserver\entity" />
       <recent name="C:\Users\15985\IdeaProjects\repast-by-spring-cloud\product\server" />
     </key>
   </component>
@@ -257,13 +250,13 @@
       <item itemvalue="HTTP Request.OrderServerApplication#1" />
       <item itemvalue="HTTP Request.OrderServerApplication#2" />
       <item itemvalue="HTTP Request.OrderServerApplication#3" />
+      <item itemvalue="HTTP Request.ZuulApplication#1" />
+      <item itemvalue="HTTP Request.ZuulApplication#2" />
       <item itemvalue="Spring Boot.EurekaApplication" />
       <item itemvalue="Spring Boot.ProductServerApplication" />
       <item itemvalue="Spring Boot.OrderServerApplication" />
       <item itemvalue="Spring Boot.ConfigApplication" />
       <item itemvalue="Spring Boot.ZuulApplication" />
-      <item itemvalue="HTTP Request.ZuulApplication#1" />
-      <item itemvalue="HTTP Request.ZuulApplication#2" />
     </list>
     <recent_temporary>
       <list>
@@ -279,7 +272,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.25303644" />
+          <option name="contentProportion" value="0.15789473" />
           <treeState>
             <expand>
               <path>
@@ -324,6 +317,8 @@
       <workItem from="1584775366639" duration="9410000" />
       <workItem from="1584832533559" duration="6166000" />
       <workItem from="1585633695270" duration="10894000" />
+      <workItem from="1585662311865" duration="104000" />
+      <workItem from="1585704981174" duration="3201000" />
     </task>
     <servers />
   </component>
@@ -342,6 +337,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="479" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584666681834" />
+    <state x="830" y="266" key="#com.intellij.ide.util.MemberChooser" timestamp="1585705174664">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="830" y="266" key="#com.intellij.ide.util.MemberChooser/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585705174664" />
     <state x="755" y="304" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585636649944">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -350,46 +349,46 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="781" y="310" key="FileChooserDialogImpl/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584683078307" />
-    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1585649120454">
+    <state width="1663" height="282" key="GridCell.Tab.0.bottom" timestamp="1585716307150">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.0.bottom/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099150" />
-    <state width="2005" height="305" key="GridCell.Tab.0.bottom/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120454" />
-    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1585649120453">
+    <state width="1663" height="282" key="GridCell.Tab.0.bottom/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585716307150" />
+    <state width="1663" height="282" key="GridCell.Tab.0.center" timestamp="1585716307150">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.0.center/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099150" />
-    <state width="2005" height="305" key="GridCell.Tab.0.center/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120453" />
-    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1585649120453">
+    <state width="1663" height="282" key="GridCell.Tab.0.center/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585716307150" />
+    <state width="1663" height="282" key="GridCell.Tab.0.left" timestamp="1585716307150">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.0.left/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099150" />
-    <state width="2005" height="305" key="GridCell.Tab.0.left/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120453" />
-    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1585649120453">
+    <state width="1663" height="282" key="GridCell.Tab.0.left/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585716307150" />
+    <state width="1663" height="282" key="GridCell.Tab.0.right" timestamp="1585716307150">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.0.right/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099150" />
-    <state width="2005" height="305" key="GridCell.Tab.0.right/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120453" />
-    <state width="1475" height="427" key="GridCell.Tab.1.bottom" timestamp="1585649120451">
+    <state width="1663" height="282" key="GridCell.Tab.0.right/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585716307150" />
+    <state width="1663" height="282" key="GridCell.Tab.1.bottom" timestamp="1585716307150">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.1.bottom/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099151" />
-    <state width="1475" height="427" key="GridCell.Tab.1.bottom/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120451" />
-    <state width="1475" height="427" key="GridCell.Tab.1.center" timestamp="1585649120451">
+    <state width="1663" height="282" key="GridCell.Tab.1.bottom/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585716307150" />
+    <state width="1663" height="282" key="GridCell.Tab.1.center" timestamp="1585716307150">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.1.center/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099151" />
-    <state width="1475" height="427" key="GridCell.Tab.1.center/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120451" />
-    <state width="1475" height="427" key="GridCell.Tab.1.left" timestamp="1585649120451">
+    <state width="1663" height="282" key="GridCell.Tab.1.center/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585716307150" />
+    <state width="1663" height="282" key="GridCell.Tab.1.left" timestamp="1585716307150">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.1.left/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099150" />
-    <state width="1475" height="427" key="GridCell.Tab.1.left/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120451" />
-    <state width="1475" height="427" key="GridCell.Tab.1.right" timestamp="1585649120451">
+    <state width="1663" height="282" key="GridCell.Tab.1.left/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585716307150" />
+    <state width="1663" height="282" key="GridCell.Tab.1.right" timestamp="1585716307150">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="172" key="GridCell.Tab.1.right/-1920.485.1536.824/0.0.2048.1112@-1920.485.1536.824" timestamp="1584838099151" />
-    <state width="1475" height="427" key="GridCell.Tab.1.right/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585649120451" />
+    <state width="1663" height="282" key="GridCell.Tab.1.right/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585716307150" />
     <state x="695" y="272" key="NewModule_or_Project.wizard" timestamp="1584666232810">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -402,5 +401,9 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="386" y="310" key="new project wizard/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585639923429" />
+    <state x="681" y="259" key="run.anything.popup" timestamp="1585704993799">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="681" y="259" key="run.anything.popup/-1920.485.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1585704993799" />
   </component>
 </project>
