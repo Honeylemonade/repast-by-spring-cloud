@@ -79,4 +79,27 @@ public class ProductController {
     public void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInput) {
         productService.decreaseStock(decreaseStockInput);
     }
+
+    @PostMapping("/sort")
+    public String sort(@RequestBody int[] array) {
+
+        for (int i = array.length; i >= 0; i--) {
+            for (int j = 0; j < i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    swap(array, j, j + 1);
+                }
+            }
+        }
+        StringBuffer stringBuffer = new StringBuffer();
+        for (int a : array) {
+            stringBuffer.append(a + " ");
+        }
+        return stringBuffer.toString();
+    }
+
+    public static void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 }
